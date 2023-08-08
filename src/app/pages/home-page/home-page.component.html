@@ -1,0 +1,4 @@
+<button mat-stroked-button (click)="logout()">Logout</button>
+<section>
+  <app-home [inputProducts]="products$ | async" (onScroll)="onScroll()"></app-home>
+</section>

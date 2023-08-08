@@ -1,0 +1,12 @@
+.product-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 50vh;
+  overflow: scroll;
+
+  &-item {
+    border: 1px black dotted;
+    flex: 100%;
+  }
+}

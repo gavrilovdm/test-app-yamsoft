@@ -1,0 +1,19 @@
+<div *ngIf="!products || products.length === 0">
+  Data is not loaded.
+</div>
+
+<div class="product-list" *ngIf="products"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     [scrollWindow]="false"
+     (scrolled)="onScroll.emit()">
+  <div class="product-list-item" *ngFor="let p of products">
+    <h3>{{p.title}}</h3>
+    <p>{{p.description}}</p>
+    <h5>{{p.category}}</h5>
+  </div>
+</div>
+
+<hr>
+Products length: {{ products.length }}
